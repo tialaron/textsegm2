@@ -6,7 +6,7 @@ from PIL import Image
 
 #cwd = os.getcwd()
 #st.write(cwd)
-image1 = Image.open('/app/pipesegm.png')
+image1 = Image.open('/pipesegm.png')
 spisok_doc = os.listdir('/app/original_docs/')
 
 st.set_page_config(layout='wide')
