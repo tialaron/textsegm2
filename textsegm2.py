@@ -6,8 +6,8 @@ from PIL import Image
 
 #cwd = os.getcwd()
 #st.write(cwd)
-image1 = Image.open('C:\\PycharmProjects\\segment2\\venv\\pipesegm.png')
-spisok_doc = os.listdir('C:\\PycharmProjects\\segment2\\venv\\original_docs\\')
+image1 = Image.open('/app/pipesegm.png')
+spisok_doc = os.listdir('/app/original_docs/')
 
 st.set_page_config(layout='wide')
 st.header('Лабораторная работа:"Сегментация договоров".')
@@ -59,7 +59,7 @@ col1, col2 = st.columns(2)
 with col1:
   with st.container():
     st.subheader('Оригинал договора')
-    filename1 = 'C:\\PycharmProjects\\segment2\\venv\\original_docs\\'+spisok_doc[counter2]
+    filename1 = '/app/original_docs/'+spisok_doc[counter2]
     f = open(filename1 ,'r',encoding="utf8")
     textor = f.read()
     st.write(textor)
@@ -67,7 +67,7 @@ with col1:
 with col2:
   with st.container():
     st.subheader('Договор обработанный нейронной сетью.')
-    filename2 = 'C:\\PycharmProjects\\segment2\\venv\\modified_docs\\'+spisok_doc[counter2]
+    filename2 = '/app/modified_docs/'+spisok_doc[counter2]
     f2 = open(filename2 , 'r', encoding="utf8")
     textor2 = f2.read()
     #st.write(textor2)
